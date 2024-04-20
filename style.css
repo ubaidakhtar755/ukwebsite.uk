@@ -30,6 +30,9 @@ a:hover {
 #email-social-media-icon-bar {
     padding: 0px 10px;
     background: #013742;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
 }
 
 .email-social-media-icon-bar-main-box {
@@ -46,6 +49,7 @@ a:hover {
 
 .email-social-media-icon-bar-main-box-left-descricption {
     margin-left: 40px;
+    /* display: none !important; */
     padding: 3px 0px;
     display: flex;
     justify-content: center;
@@ -271,8 +275,8 @@ img.adjust-log-width {
         margin: 0px;
         cursor: pointer;
         display: block;
-        top: 3px;
-        left: 20px;
+        top: -31px;
+        left: 26px;
     }
 
     .manu-bar {
@@ -436,6 +440,7 @@ img.adjust-log-width {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
+    margin-top: 100px;
 }
 
 .hero-main-box {
@@ -876,7 +881,7 @@ p.essay-writing-service-main-box-left-sub-box-description {
 }
 
 .cell-icon-box-description {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
 }
@@ -1566,6 +1571,7 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
     padding-top: 7px;
     text-align: center;
     display: flex;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -1658,10 +1664,11 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
 }
 
 .footer-main-box-second-sub-box a {
-    display: block;
+    display: flex;
     margin-top: 13px;
     color: white;
     transition: all .5s ease-in-out;
+    align-items: center;
 }
 
 .footer-main-box-second-sub-box a:hover {
@@ -1745,8 +1752,8 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
     color: white;
     margin: 0px;
     margin-left: 15px;
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .footer-contact-and-follow-icon-main-box-left-right-box {
@@ -1815,6 +1822,7 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 100px;
 }
 
 .about-hero-main-box-left-heading-style {
@@ -1823,6 +1831,7 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
     font-style: italic;
     margin-bottom: 20px;
     color: white;
+    text-align: left;
 }
 
 .about-hero-main-box-left-description {
@@ -1970,6 +1979,8 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
     border-radius: 50px;
     margin-top: 5px;
     margin-bottom: 24px;
+    outline: none;
+    border: 1px solid #E2B607;
 }
 
 .order-main-box-left-left-box-span {
@@ -1985,7 +1996,8 @@ button.anchor-tag-style-contact-number.icon-color-change.text-color-change-ancho
     width: 100%;
     padding: 15px;
     border-radius: 50px;
-    border: 1px solid black;
+    border: 1px solid #E2B607;
+    outline: none;
     margin-top: 5px;
     margin-bottom: 24px;
 }
@@ -2078,6 +2090,8 @@ textarea {
     min-width: 100%;
     max-width: 100%;
     max-height: 99px;
+    border: 1px solid #E2B607;
+    outline: none;
 }
 
 .display-none-laptop-and-pc {
@@ -2087,17 +2101,24 @@ textarea {
 .payment-icon-image img {
     margin-top: 17px !important;
 }
-
+.required{
+    color: red;
+    font-size: 20px;
+}
 #service-hero {
     background-image: url("image/service-page-hero-bg.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 100px;
 }
 
 section#navigation-bar {
     padding: 0px;
     background: #E2B607;
+    position: fixed;
+    top: 30px;
+    z-index: 100;
 }
 
 .adjust-margin-and-padding {
@@ -2494,13 +2515,14 @@ p.customer-id {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        /* gap: 20px; */
     }
 
     .email-social-media-icon-bar-main-box-left {
         width: 100%;
         display: flex;
         justify-content: center;
+        display: none;
     }
 
     .email-social-media-icon-bar-main-box-right {
@@ -3019,6 +3041,73 @@ p.customer-id {
         color: white;
         margin-left: 48px;
     }
+    #hero {
+        background-image: url(image/hero-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 20px;
+        margin-top: 25px;
+    }
+    #about-hero {
+        background-image: url(image/about-hero-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 25px;
+    }
+    #service-hero {
+        background-image: url(image/service-page-hero-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 25px;
+    }
+    .side-bar {
+        background: #ffffff;
+        backdrop-filter: blur(15px);
+        box-shadow: 0px 0px 0px gray;
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        overflow-y: auto;
+        transition: 0.6s ease;
+        transition-property: left;
+    }
+    .display-none-responsice-design {
+        display: none;
+    }
+    .faq-image-box {
+        width: 35%;
+        position: relative;
+        display: none;
+    }
+    .faqs-main-box {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .email-social-media-icon-bar-main-box-left-descricption {
+        margin-left: 40px;
+        /* display: none !important; */
+        padding: 3px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    #top-essay-writing-about-us {
+        background-image: url("image/about-us-bg-home-page.png");
+        background: #2a646c;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
 }
 
 .header-style-new-design {
@@ -3030,4 +3119,42 @@ p.customer-id {
 
 .adjust-log-computer-screen-size {
     width: 40%;
+}
+.whatsapp-icon-box-main-box{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #006b48;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+animation: whatsppicon 4s infinite;
+display: flex;
+justify-content: center;
+align-items: center;
+transform: scale(1.05);
+transition: all .1s ease-in-out;
+}
+@keyframes whatsppicon{
+    0%{
+       
+        transform: scale(0.8);
+    }
+    100%{
+transform: scale(1);
+    }
+}
+.whatsapp-icon-box-main-box-sub-box{
+    width: 60px;
+    height: 60px;
+    background-color: #006b48;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.whatsapp-icon-box-main-box-sub-box a i{
+    font-size: 50px;
+    color: white;
 }
